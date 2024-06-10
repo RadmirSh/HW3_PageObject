@@ -9,7 +9,7 @@ class BasePage:
 
     def find_element(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
-                                                      message=f'Can"t find element by locator {locator}')
+                                                      message=f'Cant find element by locator {locator}')
 
     def get_element_property(self, locator, property):
         element = self.find_element(locator)
